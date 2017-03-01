@@ -1,0 +1,16 @@
+{
+  "name": "braddle/oopa-integer",
+  "description": "A short pair programming TDD exercise to assess a developers understanding of basic OOP Principles.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Braddle\\Integer\\Test\\": "test/",
+      "Braddle\\Integer\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.0",
+    "phpunit/phpunit": "^6.0.7"
+  }
+}
