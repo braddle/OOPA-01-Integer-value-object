@@ -12,6 +12,9 @@ person being assessed at the end of the assessment. If you have other suggestion
 The script slowly builds up the complexity of the features. If the person you are assessing is struggling it should be 
 possible to end the assessment at any point rather than having someone struggle through the remaining tasks.
 
+This assessment covers the basic concepts of OOP (Construction, Mutability, Value Objects, Scalar Types), Exceptions and 
+Naming things.
+
 ## Setup
 
 Please ensure you read through the entire script before you start assessing.
@@ -55,7 +58,8 @@ _Suggested Reading_ ???
 
 A class is a template for defining objects.
  
-It specifies the names and types of variables that can exist in an object, as well as methods for operating on those variables.
+It specifies the names and types of variables that can exist in an object, as well as methods for operating on those 
+variables.
  
 An Object is an instance of that class that can hold values and be operated upon.
 
@@ -99,6 +103,8 @@ public function testWeCanGetTheObjectsNumber()
 **What shall we call the variable in the test?**
 **What should we name the variable holding the value?**
 **What word to we use to referer to basic types** Scalar
+
+_Recommended Reading_ ??? Naming things
 
 ### It should know if it is equal to another integer object
 ```php
@@ -181,6 +187,8 @@ a string is traditionally a sequence of characters, either as a literal constant
 Exception handling is the process of responding to the occurrence, during computation, of exceptions – anomalous or 
 exceptional conditions requiring special processing – often changing the normal flow of program execution.
 
+_Recommended Reading_ ???
+
 ### It should throw an exception when given a boolean?
 ```php
 public function testItDoesNotAcceptBooleansOnConstruction()
@@ -259,10 +267,10 @@ public function testItCanDividetheValueOfAnotherInterger()
 
 ### It should throw an exception if it cannot divide to an integer
 ```php
-Public function testItDoesNotAllowDivitionIfItCannotPreduceAnInteger()
+public function testItDoesNotAllowDivitionIfItCannotPreduceAnInteger()
 {
-	$this->setExpectedException(\Exception::class);
-	$this->setExpectedExceptionMessage(“Divideing 5 by 2 does not create a whole number”);
+	$this->expectedException(\Exception::class);
+	$this->expectedExceptionMessage(“Divideing 5 by 2 does not create a whole number”);
 	
 	$five = new Integer(5);
 	$two = new Integer(2);
@@ -270,3 +278,7 @@ Public function testItDoesNotAllowDivitionIfItCannotPreduceAnInteger()
 	$five->divideBy($two);
 }
 ```
+**Have you heard of the Modulus Operator??** 
+
+The result of the modulo operator % has the same sign as the dividend — that is, the result of `$a % $b` will have the 
+same sign as `$a`.
